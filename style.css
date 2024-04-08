@@ -58,9 +58,14 @@ main > .main__grid1 > .main1__img {
 }
 
 main > .main__grid2 {
+    background-color: #00001A;
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
+}
+
+main > .main__grid1 > .main1__h1 {
+    align-content: space-evenly;
 }
 
 main > .main__grid1 > .main1__h1 > h1 {
@@ -96,7 +101,6 @@ main > .main__grid1 > .main1__article > .main1__article__btn > a {
 }
 
 main > .main__grid2 > .main2__articles {
-    background-color: #00001A;
     padding: 30px 25px 30px 25px;
     display: flex;
     flex-direction: column;
@@ -178,14 +182,12 @@ section > .section__grid__article > .section__grid__article_elm > .section__grid
 
 
 
-@media (max-width: 768px) {   
-    html {
-        width: 370px;
-    } 
+@media (max-width: 768px) {
 
     .container {
-        width: 370px;
-        margin: 28px 16px 70px 16px;
+        width: auto;
+        margin: 0 auto;
+        padding: 28px 16px 28px 16px;
     }
 
     header {
@@ -214,8 +216,7 @@ section > .section__grid__article > .section__grid__article_elm > .section__grid
     }
 
     .square_img {
-        width: 90%;
-        width: auto;
+        width: 100%;
         overflow: hidden;
         display: block;
     }
