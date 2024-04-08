@@ -16,6 +16,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 header > .header__menu > img {
@@ -175,9 +176,15 @@ section > .section__grid__article > .section__grid__article_elm > .section__grid
     color: #5E607A;
 }
 
-@media (max-width: 768px) {    
+
+
+@media (max-width: 768px) {   
+    html {
+        width: 370px;
+    } 
+
     .container {
-        max-width: 90%;
+        width: 370px;
         margin: 28px 16px 70px 16px;
     }
 
@@ -185,11 +192,12 @@ section > .section__grid__article > .section__grid__article_elm > .section__grid
         padding-top: 0;
         padding-bottom: 28px;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
     }
 
     header > .header__menu > img {
-        display: inline-flex;
+        display: block;
     }
 
     header > .header__menu > ul {
@@ -198,6 +206,7 @@ section > .section__grid__article > .section__grid__article_elm > .section__grid
 
     main {
         display: flex;
+        flex-direction: column;
     }
 
     .rect_img {
@@ -206,7 +215,7 @@ section > .section__grid__article > .section__grid__article_elm > .section__grid
 
     .square_img {
         width: 90%;
-        height: auto;
+        width: auto;
         overflow: hidden;
         display: block;
     }
@@ -218,13 +227,37 @@ section > .section__grid__article > .section__grid__article_elm > .section__grid
     }
 
     main > .main__grid1 {
-        display: grid;
+        display: flex;
+        flex-direction: column;
         gap: 28px;
-        grid-template-columns: 100vw;
-        grid-template-rows: auto auto auto;
     }
 
     main > .main__grid1 > .main1__img {
-        grid-column: 1 / 2;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    main > .main__grid1 > .main1__h1 > h1 {
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 40px;
+    }
+
+    section > .section__grid__article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section > .section__grid__article > .section__grid__article_elm {
+        display: grid;
+        grid-template-columns: 100px auto;
+        grid-template-rows: auto auto;
+        gap: 25px;
+    }
+
+    section {
+        padding-top: 70px;
+        padding-bottom: 0;
+        height: 100%;
     }
 }
